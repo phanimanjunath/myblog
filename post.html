@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.content }}</p>
+    <a href="/edit/{{ post.id }}" class="btn btn-primary">Edit</a>
+    <form action="/delete/{{ post.id }}" method="POST" style="display: inline;">
+        <button type="submit" class="btn btn-danger">Delete</button>
+    </form>
+{% endblock %}
